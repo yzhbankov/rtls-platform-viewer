@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ErrorBoundary } from 'react-error-boundary';
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 
-function ErrorFallback({ error, resetErrorBoundary }) {
+
+function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
      return (
           <div role="alert">Something went wrong</div>
      )
 }
 
-export function ErrorBoundaryComponent ({ children }) {
+type BoundaryProps = {
+     children: React.ReactNode
+}
+
+export function ErrorBoundaryComponent({ children }: BoundaryProps) {
      return (
           <ErrorBoundary
                FallbackComponent={ErrorFallback}
