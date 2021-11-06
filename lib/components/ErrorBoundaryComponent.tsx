@@ -12,10 +12,9 @@ export function ErrorBoundaryComponent ({ children }) {
      return (
           <ErrorBoundary
                FallbackComponent={ErrorFallback}
-               onError={(error, errorInfo) => { 
-                    console.error(error);
-                    console.error(errorInfo);
-                }}
+               onError={(error, errorInfo) => {
+                    // save error in logger
+               }}
                onReset={() => {
                     // reset the state of your app so the error doesn't happen again
                }}
