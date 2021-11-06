@@ -1,7 +1,8 @@
-import * as React from "react";
+import React from 'react';
 
 export function AppContainer() {
-     return <div>App Container</div>
+     const a = 1;
+     return <div>App Container {a}</div>
 }
 
 AppContainer.defaultProps = {}

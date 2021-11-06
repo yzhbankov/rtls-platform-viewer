@@ -1,28 +1,45 @@
 {
-     "compilerOptions": {
-       "baseUrl": "./",
-       "target": "es6",
-       "module": "esnext",
-       "lib": ["es2017", "dom"],
-       "moduleResolution": "node",
-       "declaration": false,
-       "noImplicitAny": false,
-       "sourceMap": true,
-       "strictNullChecks": false,
-       "jsx": "react",
-       "suppressImplicitAnyIndexErrors": true,
-       "esModuleInterop": true,
-       "allowSyntheticDefaultImports": true,
-       "importHelpers": true
-     },
-     "files": ["src/index.tsx"],
-     "include": ["./src/**/*"],
-     "exclude": [
-       "node_modules"
-     ],
-     "awesomeTypescriptLoaderOptions": {
-       "useCache": true,
-       "forceIsolatedModules": true,
-       "silent": true
-     }
-   }
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es6",
+    "module": "es6",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "declaration": false,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "jsx": "react",
+    "suppressImplicitAnyIndexErrors": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "alwaysShowRuleFailuresAsWarnings": false,
+        "ignoreDefinitionFiles": true,
+        "configFile": "./tslint.json",
+        "suppressWhileTypeErrorsPresent": false
+      }
+    ]
+  },
+  "files": [
+    "src/index.tsx"
+  ],
+  "include": [
+    "./src/**/*",
+    "webpack.config.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useCache": true,
+    "forceIsolatedModules": true,
+    "silent": true
+  }
+}
