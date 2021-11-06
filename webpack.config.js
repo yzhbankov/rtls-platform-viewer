@@ -30,6 +30,14 @@ module.exports = {
     modules: ['node_modules'],
     extensions: ['.js', '.jsx', '.mjs', '.tsx', '.ts'],
   },
+  devServer: {
+    hot: true,
+    headers: {'Access-Control-Allow-Origin': '*'},
+    historyApiFallback: true,
+  },
+  watchOptions: {
+    ignored: '**/node_modules',
+  },
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'client.min.js',
