@@ -28,10 +28,10 @@
     ]
   },
   "files": [
-    "src/index.tsx"
+    "lib/index.tsx"
   ],
   "include": [
-    "./src/**/*",
+    "lib/**/*",
     "webpack.config.js"
   ],
   "exclude": [

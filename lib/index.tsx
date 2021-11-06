@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { AppContainer } from './app/AppContainer';
 import './index.css'
 
 ReactDom.render(
-     <AppContainer />,
+     <BrowserRouter>
+          <AppContainer />
+     </BrowserRouter>,
      document.getElementById('app')
 )

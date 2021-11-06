@@ -2,7 +2,7 @@
   "name": "rtls-platform-viewer",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.tsx",
+  "main": "./lib/index.tsx",
   "scripts": {
     "test": "test",
     "start": "NODE_ENV=development webpack serve --host 0.0.0.0 --hot --port 8086",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.34",
+    "@types/react-router-dom": "^5.3.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "dotenv-webpack": "^7.0.3",
