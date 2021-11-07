@@ -30,7 +30,7 @@ export function ErrorBoundaryComponent({ children }: BoundaryProps) {
 }
 
 ErrorBoundaryComponent.defaultProps = {
-     children: PropTypes.element
+     children: PropTypes.object
 };
 
 ErrorBoundaryComponent.propTypes = {

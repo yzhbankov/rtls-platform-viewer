@@ -1,5 +1,5 @@
 /* Disable scroll out of app*/
 body {
   overflow: hidden;
-  background-color: brown;
+  /* background-color: brown; */
 }
