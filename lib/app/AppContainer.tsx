@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { App } from './App';
 import { LoginPage } from '../features/auth/components';
 
-export function AppContainer() {
+export function AppContainer(): React.ReactElement {
      return (
           <Routes>
                <Route path="/*" element={<App />} />
