@@ -21,6 +21,7 @@ export function useAuth() {
                     setLoggingInProcess(false);
                })
      }
+     // todo: implement redirect to login page
      const logout = () => {
           persistanceStorage.apiToken = null
      }
