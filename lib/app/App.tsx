@@ -18,8 +18,8 @@ export function App(): ReactElement {
                          <Route path="locations" element={<PrivateElement element={<div>Locations</div>} />} />
                          <Route path="sublocations" element={<PrivateElement element={<div>Sublocations</div>} />} />
                     </Route>
-                    <Route path="/site-view" element={<PrivateElement element={<div>Site View Page</div>} />} />
-                    <Route path="/system" element={<PrivateElement element={<div>System Status</div>} />} />
+                    <Route path="site-view" element={<PrivateElement element={<div>Site View Page</div>} />} />
+                    <Route path="system" element={<PrivateElement element={<div>System Status</div>} />} />
                </Routes>
           </>
      )
