@@ -1,6 +1,6 @@
 import React, { useState, ReactElement } from 'react';
 import { Navigate } from 'react-router-dom';
-import Button from '@mui/material/Button';
+import { Button } from '../../../components';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useAuth } from '../hooks';
 
@@ -42,7 +42,6 @@ export function LoginPage(): ReactElement {
 
                     </form>
                     <Button
-                         variant="contained"
                          onClick={() => {
                               login({ password, email });
                          }}

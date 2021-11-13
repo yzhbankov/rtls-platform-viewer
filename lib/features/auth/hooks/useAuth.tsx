@@ -1,10 +1,12 @@
-import { useContext, useState } from 'react'
-import { AppContext } from '../../../context'
+import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AppContext } from '../../../context';
 
 export function useAuth() {
      const { api, persistanceStorage } = useContext(AppContext)
      const [loggingInProcess, setLoggingInProcess] = useState(false);
      const [error, setError] = useState(null);
+     const navigate = useNavigate();
 
      const login = (params) => {
           setLoggingInProcess(true);
@@ -21,9 +23,10 @@ export function useAuth() {
                     setLoggingInProcess(false);
                })
      }
-     // todo: implement redirect to login page
+
      const logout = () => {
           persistanceStorage.apiToken = null
+          navigate('login');
      }
 
      const checkSession = () => {
@@ -32,8 +35,7 @@ export function useAuth() {
 
           if (token) {
                login({ token }).then(() => {
-                    // todo: navigate to last known public path
-                    // history.push(lastPath)
+                    navigate(lastPath);
                })
           }
      }

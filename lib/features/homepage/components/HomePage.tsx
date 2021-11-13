@@ -1,12 +1,23 @@
 import React, { ReactElement } from 'react';
-import { Layout } from '../../../components/layout';
+import { Layout, Content } from '../../../components/layout';
+import { HomePageContent } from './HomePageContent';
+
 
 
 export function HomePage(): ReactElement {
      return (
           <Layout
-               sideBarRender={() => (<div>SideBar</div>)}
-               contentRender={() => (<div>Content</div>)}
+               sideBarRender={
+                    () => (<></>)
+               }
+               contentRender={
+                    () => (
+                         <Content
+                              innerContentRender={
+                                   () => <HomePageContent />
+                              }
+                         />)
+               }
           />
      )
 }

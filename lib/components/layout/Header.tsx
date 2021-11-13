@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,6 +11,8 @@ import { useAuth } from '../../features/auth/hooks';
 
 export function Header(): ReactElement {
   const { logout } = useAuth();
+  const navigate = useNavigate();
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -23,7 +26,7 @@ export function Header(): ReactElement {
           >
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            <Button color="inherit" onClick={() => navigate('home')}>Home</Button>
           </Typography>
           <Button color="inherit" onClick={logout}>Logout</Button>
         </Toolbar>

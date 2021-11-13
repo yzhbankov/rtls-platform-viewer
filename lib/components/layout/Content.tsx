@@ -1,8 +1,17 @@
 import React, { ReactElement } from 'react';
+import PropTypes from 'prop-types';
 
-export function Content(): ReactElement {
-     return (<div>Content</div>)
+type ContentProps = {
+     innerContentRender: () => ReactElement
+}
+export function Content({ innerContentRender }): ReactElement<ContentProps> {
+     return (<div>{innerContentRender()}</div>)
 }
 
-Content.propTypes = {};
-Content.defualtProps = {};
+Content.propTypes = {
+     innerContentRender: PropTypes.func
+};
+
+Content.defualtProps = {
+     innerContentRender: () => null
+};
