@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Layout } from '../../../components/layout';
 
-export function HomePage() {
+
+export function HomePage(): ReactElement {
      return (
           <Layout
                sideBarRender={() => (<div>SideBar</div>)}

@@ -9,7 +9,7 @@ import { useAuth } from '../../features/auth/hooks';
 
 
 export function Header(): ReactElement {
-     const { logout } = useAuth();
+  const { logout } = useAuth();
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -33,4 +33,5 @@ export function Header(): ReactElement {
 }
 
 Header.propTypes = {};
+
 Header.defaultProps = {};

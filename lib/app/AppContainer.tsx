@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { App } from './App';
 import { LoginPage } from '../features/auth/components';
 
-export function AppContainer(): React.ReactElement {
+export function AppContainer(): ReactElement {
      return (
           <Routes>
                <Route path="/*" element={<App />} />

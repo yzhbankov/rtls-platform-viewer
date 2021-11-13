@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, ReactElement } from 'react';
 import { Navigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useAuth } from '../hooks';
 
-export function LoginPage() {
+
+export function LoginPage(): ReactElement {
      const [password, setPassword] = useState('');
      const [email, setEmail] = useState('');
      const { login, error, loggingInProcess, hasToken } = useAuth();

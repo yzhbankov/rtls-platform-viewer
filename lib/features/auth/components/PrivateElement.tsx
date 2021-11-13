@@ -7,7 +7,7 @@ type PrivateRouteProps = {
 }
 
 // todo: check for react-roiuter-dom v6 fixes to implement fully functional private router
-export function PrivateElement({ element }: PrivateRouteProps): ReactElement {
+export function PrivateElement({ element }): ReactElement<PrivateRouteProps> {
      const { hasToken } = useAuth();
      return hasToken ? element : <Navigate to="/login" replace={true} />
 }
