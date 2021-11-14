@@ -3,6 +3,7 @@ import { ILogApi } from './LogApi';
 import { ITrackablesApi } from './TrackablesApi';
 import { ITagsApi } from './TagsApi';
 import { INoedsApi } from './NodesApi';
+import { IAnchorsApi } from './AnchorsApi';
 
 interface IClientApi {
   auth(): IAuthApi;
@@ -10,6 +11,7 @@ interface IClientApi {
   trackables(): ITrackablesApi;
   tags(): ITagsApi;
   nodes(): INoedsApi;
+  anchors(): IAnchorsApi;
 }
 
 export class ClientApi implements IClientApi {
@@ -30,6 +32,10 @@ export class ClientApi implements IClientApi {
     return null;
   }
   get nodes() {
+    throw new Error('NotYetImplemented')
+    return null;
+  }
+  get anchors() {
     throw new Error('NotYetImplemented')
     return null;
   }
