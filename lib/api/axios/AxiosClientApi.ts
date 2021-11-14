@@ -2,11 +2,14 @@ import axios from 'axios';
 import { ClientApi } from '../core';
 import { AxiosAuthApi } from './AxiosAuthApi';
 import { AxiosLogApi } from './AxiosLogApi';
+import { AxiosTagsApi } from './AxiosTagsApi';
+import { AxiosTrackablesApi } from './AxiosTrackablesApi';
 
 export class AxiosClientApi extends ClientApi {
   #auth = null
-
   #log = null
+  #trackables = null
+  #tags = null
 
   constructor(options) {
     super()
@@ -17,13 +20,20 @@ export class AxiosClientApi extends ClientApi {
 
     this.#auth = new AxiosAuthApi(instance)
     this.#log = new AxiosLogApi(instance)
+    this.#trackables = new AxiosTrackablesApi(instance)
+    this.#tags = new AxiosTagsApi(instance)
   }
 
   get auth() {
     return this.#auth
   }
-
   get log() {
     return this.#log
+  }
+  get trackables() {
+    return this.#trackables
+  }
+  get tags() {
+    return this.#tags
   }
 }

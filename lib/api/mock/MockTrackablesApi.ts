@@ -15,10 +15,10 @@ export class MockTrackablesApi extends TrackablesApi {
     return { trackables: [ this.#mock[0] ] }
   }
   async save(params) {
-    return this.#mock.trackables[0]
+    return this.#mock[0]
   }
   async update(uid, params) {
-    return this.#mock.trackables[0]
+    return this.#mock[0]
   }
   async delete(params) {
     return { uid: params }
