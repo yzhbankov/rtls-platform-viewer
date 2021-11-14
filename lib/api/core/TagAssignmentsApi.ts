@@ -1,5 +1,7 @@
 export type TagAssignmentResponse = {
   mac: string;
+  last_heard: string;
+  node_id: number;
   trackable_uid: string;
   created_at: string;
 }

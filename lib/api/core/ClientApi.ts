@@ -5,6 +5,7 @@ import { ITagsApi } from './TagsApi';
 import { INoedsApi } from './NodesApi';
 import { IAnchorsApi } from './AnchorsApi';
 import { ITagAssignmentsApi } from './TagAssignmentsApi';
+import { INodeAssignmentsApi } from './NodeAssignmentsApi';
 
 interface IClientApi {
   auth(): IAuthApi;
@@ -14,6 +15,7 @@ interface IClientApi {
   nodes(): INoedsApi;
   anchors(): IAnchorsApi;
   tagAssignments(): ITagAssignmentsApi;
+  nodeAssignments(): INodeAssignmentsApi;
 }
 
 export class ClientApi implements IClientApi {
@@ -42,6 +44,10 @@ export class ClientApi implements IClientApi {
     return null;
   }
   get tagAssignments() {
+    throw new Error('NotYetImplemented')
+    return null;
+  }
+  get nodeAssignments() {
     throw new Error('NotYetImplemented')
     return null;
   }
