@@ -6,6 +6,7 @@ import { AxiosTagsApi } from './AxiosTagsApi';
 import { AxiosTrackablesApi } from './AxiosTrackablesApi';
 import { AxiosNodesApi } from './AxiosNodesApi';
 import { AxiosAnchorsApi } from './AxiosAnchorsApi';
+import { AxiosTagAssignmentsApi } from './AxiosTagAssignmentsApi';
 
 export class AxiosClientApi extends ClientApi {
   #auth = null
@@ -14,6 +15,7 @@ export class AxiosClientApi extends ClientApi {
   #tags = null
   #nodes = null
   #anchors = null
+  #tagAssignments = null
 
   constructor(options) {
     super()
@@ -28,6 +30,7 @@ export class AxiosClientApi extends ClientApi {
     this.#tags = new AxiosTagsApi(instance)
     this.#nodes = new AxiosNodesApi(instance)
     this.#anchors = new AxiosAnchorsApi(instance)
+    this.#tagAssignments = new AxiosTagAssignmentsApi(instance)
   }
 
   get auth() {
@@ -47,5 +50,8 @@ export class AxiosClientApi extends ClientApi {
   }
   get anchors() {
     return this.#anchors
+  }
+  get tagAssignments() {
+    return this.#tagAssignments
   }
 }

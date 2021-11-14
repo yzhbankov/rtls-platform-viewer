@@ -5,6 +5,7 @@ import { MockTrackablesApi } from './MockTrackablesApi';
 import { MockTagsApi } from './MockTagsApi';
 import { MockNodesApi } from './MockNodesApi';
 import { MockAnchorsApi } from './MockAnchorsApi';
+import { MockTagAssignmentsApi } from './MockTagAssignmentsApi';
 import mock from './mock.json';
 
 export class MockClientApi extends ClientApi {
@@ -14,6 +15,7 @@ export class MockClientApi extends ClientApi {
   #tags = null
   #nodes = null
   #anchors = null
+  #tagAssignments = null
 
   constructor() {
     super()
@@ -23,6 +25,7 @@ export class MockClientApi extends ClientApi {
     this.#tags = new MockTagsApi(mock.tags);
     this.#nodes = new MockNodesApi(mock.nodes);
     this.#anchors = new MockAnchorsApi(mock.anchors);
+    this.#tagAssignments = new MockTagAssignmentsApi(mock.tagAssignments);
   }
   get auth() {
     return this.#auth
@@ -41,5 +44,8 @@ export class MockClientApi extends ClientApi {
   }
   get anchors() {
     return this.#anchors
+  }
+  get tagAssignments() {
+    return this.#tagAssignments
   }
 }

@@ -4,6 +4,7 @@ import { ITrackablesApi } from './TrackablesApi';
 import { ITagsApi } from './TagsApi';
 import { INoedsApi } from './NodesApi';
 import { IAnchorsApi } from './AnchorsApi';
+import { ITagAssignmentsApi } from './TagAssignmentsApi';
 
 interface IClientApi {
   auth(): IAuthApi;
@@ -12,6 +13,7 @@ interface IClientApi {
   tags(): ITagsApi;
   nodes(): INoedsApi;
   anchors(): IAnchorsApi;
+  tagAssignments(): ITagAssignmentsApi;
 }
 
 export class ClientApi implements IClientApi {
@@ -36,6 +38,10 @@ export class ClientApi implements IClientApi {
     return null;
   }
   get anchors() {
+    throw new Error('NotYetImplemented')
+    return null;
+  }
+  get tagAssignments() {
     throw new Error('NotYetImplemented')
     return null;
   }

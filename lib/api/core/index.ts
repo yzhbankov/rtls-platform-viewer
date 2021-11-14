@@ -5,3 +5,4 @@ export * from './NodesApi';
 export * from './ClientApi';
 export * from './LogApi';
 export * from './AnchorsApi';
+export * from './TagAssignmentsApi';
