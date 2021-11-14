@@ -7,6 +7,7 @@ import { IAnchorsApi } from './AnchorsApi';
 import { ITagAssignmentsApi } from './TagAssignmentsApi';
 import { INodeAssignmentsApi } from './NodeAssignmentsApi';
 import { ILocationsApi } from './LocationsApi';
+import { ISublocationsApi } from './SublocationsApi';
 
 interface IClientApi {
   auth(): IAuthApi;
@@ -18,6 +19,7 @@ interface IClientApi {
   tagAssignments(): ITagAssignmentsApi;
   nodeAssignments(): INodeAssignmentsApi;
   locations(): ILocationsApi;
+  sublocations(): ISublocationsApi;
 }
 
 export class ClientApi implements IClientApi {
@@ -54,6 +56,10 @@ export class ClientApi implements IClientApi {
     return null;
   }
   get locations() {
+    throw new Error('NotYetImplemented')
+    return null;
+  }
+  get sublocations() {
     throw new Error('NotYetImplemented')
     return null;
   }

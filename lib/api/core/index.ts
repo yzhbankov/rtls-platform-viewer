@@ -8,3 +8,4 @@ export * from './AnchorsApi';
 export * from './TagAssignmentsApi';
 export * from './NodeAssignmentsApi';
 export * from './LocationsApi';
+export * from './SublocationsApi';
