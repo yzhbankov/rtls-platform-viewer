@@ -2,12 +2,14 @@ import { IAuthApi } from './AuthApi';
 import { ILogApi } from './LogApi';
 import { ITrackablesApi } from './TrackablesApi';
 import { ITagsApi } from './TagsApi';
+import { INoedsApi } from './NodesApi';
 
 interface IClientApi {
   auth(): IAuthApi;
   log(): ILogApi;
   trackables(): ITrackablesApi;
   tags(): ITagsApi;
+  nodes(): INoedsApi;
 }
 
 export class ClientApi implements IClientApi {
@@ -24,6 +26,10 @@ export class ClientApi implements IClientApi {
     return null;
   }
   get tags() {
+    throw new Error('NotYetImplemented')
+    return null;
+  }
+  get nodes() {
     throw new Error('NotYetImplemented')
     return null;
   }
