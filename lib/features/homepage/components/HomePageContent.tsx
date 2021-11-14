@@ -5,7 +5,7 @@ import AssessmentIcon from '@mui/icons-material/Assessment';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { MenuIcon } from '../../../components';
 
-export function HomePageContent() {
+export function HomePageContent(): ReactElement {
      const navigate = useNavigate();
 
      return (

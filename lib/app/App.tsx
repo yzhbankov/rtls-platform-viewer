@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { PrivateElement } from '../features/auth/components';
 import { Header } from '../components/layout';
 import { HomePage } from '../features/homepage/components';
+import { AdminPage } from '../features/admin/components';
 
 export function App(): ReactElement {
      return (
@@ -12,7 +13,7 @@ export function App(): ReactElement {
                     <Route path="*" element={<Navigate to="/home" replace={true} />} />
                     <Route path="home" element={<PrivateElement element={<HomePage />} />} />
                     <Route path="admin">
-                         <Route path="" element={<PrivateElement element={<div>Administration page</div>} />} />
+                         <Route path="" element={<PrivateElement element={<AdminPage />} />} />
                          <Route path="trackables" element={<PrivateElement element={<div>Trackables/Tags/Assignments</div>} />} />
                          <Route path="anchors" element={<PrivateElement element={<div>Anchors/Nodes/Assignments</div>} />} />
                          <Route path="locations" element={<PrivateElement element={<div>Locations</div>} />} />
