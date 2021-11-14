@@ -4,5 +4,47 @@
           "email": "example@gmail.com",
           "id": "6457eda0-4924-4ff0-94ea-199df9b8aa6c",
           "userName": "Yaroslav Zhbankov"
-     }
+     },
+     "trackables": [
+          {
+               "uid": "eJEG2Q2kRnSHJaBdHxQ3Pw",
+               "name": "John Doe",
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z",
+               "position_reporting": {
+                    "interval": 0.25,
+                    "auto": true
+               },
+               "heartbeat": "ENABLED",
+               "tag_mount_height": 1000,
+               "tag_mac": "E4956EA501FC",
+               "position": {
+                    "timestamp": "2021-04-20T08:51:02.415Z",
+                    "x": 1000,
+                    "y": 2000,
+                    "z": 1000,
+                    "sublocation_uid": "z2kq0eIRQ92ZH87jb0BUvQ"
+               }
+          },
+          {
+               "uid": "eJEG2Q2kRnSHJaBw1FlA53",
+               "name": "John Doe",
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z",
+               "position_reporting": {
+                    "interval": 0.25,
+                    "auto": true
+               },
+               "heartbeat": "ENABLED",
+               "tag_mount_height": 1000,
+               "tag_mac": "E4956EA501FC",
+               "position": {
+                    "timestamp": "2021-04-20T08:51:02.415Z",
+                    "x": 1000,
+                    "y": 2000,
+                    "z": 1000,
+                    "sublocation_uid": "z2kq0eIRQ92ZH87jb0BUvQ"
+               }
+          }
+     ]
 }
