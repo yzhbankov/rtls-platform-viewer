@@ -5,11 +5,10 @@ const StorageKeys = {
      LastKnownPath: 'RPP_LAST_KNOWN_PATH'
 }
 
-interface IAppPersistantStorage {
+export interface IAppPersistantStorage {
      apiToken: string;
      lastRoutePath: string;
 }
-
 
 class AppPersistantStorage implements IAppPersistantStorage {
      #local = null;

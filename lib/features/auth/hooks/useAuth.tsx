@@ -1,12 +1,21 @@
 import { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../../../context';
+import { useNavigation } from '../../../hooks';
 
-export function useAuth() {
+type AuthHookType = {
+     error: any;
+     login: (params: any) => void;
+     logout: () => void;
+     checkSession: () => void;
+     hasToken: boolean;
+     loggingInProcess: boolean,
+};
+
+export function useAuth(): AuthHookType {
      const { api, persistanceStorage } = useContext(AppContext)
      const [loggingInProcess, setLoggingInProcess] = useState(false);
      const [error, setError] = useState(null);
-     const navigate = useNavigate();
+     const { navigate } = useNavigation();
 
      const login = (params) => {
           setLoggingInProcess(true);

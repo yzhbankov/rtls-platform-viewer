@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react';
-import { useNavigate } from 'react-router-dom';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import { useNavigation } from '../../../hooks';
 import { MenuIcon } from '../../../components';
 
 export function HomePageContent(): ReactElement {
-     const navigate = useNavigate();
+     const { navigate } = useNavigation();
 
      return (
           // todo: add some css framework and remove inline css

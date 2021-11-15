@@ -1,5 +1,6 @@
 import { MockClientApi } from './mock'
 import { AxiosClientApi } from './axios';
+import { IClientApi } from './core';
 
 export const ClientTypes = {
      Axios: 'axios',
@@ -13,7 +14,7 @@ type ApiClientProps = {
      }
 }
 
-export function createClient(configs: ApiClientProps) {
+export function createClient(configs: ApiClientProps): IClientApi {
      const { type = ClientTypes.Mock, options } = configs
 
      if (ClientTypes.Mock === type) {

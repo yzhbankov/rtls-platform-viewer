@@ -9,17 +9,17 @@ import { INodeAssignmentsApi } from './NodeAssignmentsApi';
 import { ILocationsApi } from './LocationsApi';
 import { ISublocationsApi } from './SublocationsApi';
 
-interface IClientApi {
-  auth(): IAuthApi;
-  log(): ILogApi;
-  trackables(): ITrackablesApi;
-  tags(): ITagsApi;
-  nodes(): INoedsApi;
-  anchors(): IAnchorsApi;
-  tagAssignments(): ITagAssignmentsApi;
-  nodeAssignments(): INodeAssignmentsApi;
-  locations(): ILocationsApi;
-  sublocations(): ISublocationsApi;
+export interface IClientApi {
+  auth: IAuthApi;
+  log: ILogApi;
+  trackables: ITrackablesApi;
+  tags: ITagsApi;
+  nodes: INoedsApi;
+  anchors: IAnchorsApi;
+  tagAssignments: ITagAssignmentsApi;
+  nodeAssignments: INodeAssignmentsApi;
+  locations: ILocationsApi;
+  sublocations: ISublocationsApi;
 }
 
 export class ClientApi implements IClientApi {

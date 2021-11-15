@@ -1,7 +1,15 @@
-import { createContext } from 'react';
+import { createContext, Context } from 'react';
+import { IAppPersistantStorage } from '../utils'
+import { IClientApi } from '../api';
 
 
-export const AppContext = createContext({
+type AppContextType = {
+     api: IClientApi;
+     logger: any;
+     persistanceStorage: IAppPersistantStorage
+}
+
+export const AppContext: Context<AppContextType> = createContext({
      api: null,
      logger: null,
      persistanceStorage: null

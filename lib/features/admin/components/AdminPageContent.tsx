@@ -1,13 +1,13 @@
 import React, { ReactElement } from 'react';
-import { useNavigate } from 'react-router-dom';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import RoomIcon from '@mui/icons-material/Room';
+import { useNavigation } from '../../../hooks';
 import { MenuIcon } from '../../../components';
 
 export function AdminPageContent(): ReactElement {
-     const navigate = useNavigate();
+     const { navigate } =  useNavigation();
      return (
           <div style={{
                display: 'flex',
