@@ -10,7 +10,6 @@ export class AxiosSublocationsApi extends SublocationsApi {
   async findAll() {
     const response = await this.#http.get('/api/v3/sublocations')
     return response ? response.data : {status: 1}
-
   }
   async findByUid(uid: string) {
     const response = await this.#http.get(`/api/v3/sublocations/${uid}`)

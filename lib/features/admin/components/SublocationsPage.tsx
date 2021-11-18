@@ -1,10 +1,10 @@
 import React, { ReactElement, useContext } from 'react';
+import { useQuery } from 'react-query';
 import { AppContext } from '../../../context';
-import { useFetchData } from '../../../hooks';
 
 export function SublocationsPage(): ReactElement {
-     const { api } = useContext(AppContext)
-     const { data, isLoading, isError } = useFetchData(() => api.sublocations.findAll());
+     const { api } = useContext(AppContext);
+     const { data, isError, isLoading } = useQuery('sublocationsAll', async () => api.sublocations.findAll());
      return <>
           <div>Sublocations Page Content</div>
           <div>Is Loading: {isLoading + ''}</div>

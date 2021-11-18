@@ -1,15 +1,15 @@
 import React, { ReactElement, useContext } from 'react';
+import { useQuery } from 'react-query'
 import { AppContext } from '../../../context';
-import { useFetchData } from '../../../hooks';
 
 export function LocationsPage(): ReactElement {
      const { api } = useContext(AppContext)
-     const { data, isLoading, isError } = useFetchData(() => api.locations.findAll());
+     const result = useQuery('locationsAll', async () => api.locations.findAll());
      return <>
           <div>Locations Page Content</div>
-          <div>Is Loading: {isLoading + ''}</div>
-          <div>Is Error: {isError + ''}</div>
-          <div>Data: {JSON.stringify(data)}</div>
+          <div>Is Loading: {result.isLoading + ''}</div>
+          <div>Is Error: {result.isError + ''}</div>
+          <div>Data: {JSON.stringify(result.data)}</div>
      </>
 }
 
