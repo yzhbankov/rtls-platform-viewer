@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import PropTypes from 'prop-types';
+import MuiButton from '@mui/material/Button';
 
 
 type ButtonProps = {
@@ -10,9 +11,9 @@ type ButtonProps = {
 
 export function Button({ label, children, onClick }): ReactElement<ButtonProps> {
      return (
-          <button color="inherit" onClick={onClick}>
+          <MuiButton variant="contained" onClick={onClick}>
                {children || label}
-          </button>
+          </MuiButton>
      );
 }
 

@@ -1,7 +1,9 @@
 import React, { useState, ReactElement } from 'react';
 import { Navigate } from 'react-router-dom';
-import { Button } from '../../../components';
 import CircularProgress from '@mui/material/CircularProgress';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import { Button } from '../../../components';
 import { useAuth } from '../hooks';
 
 
@@ -12,35 +14,39 @@ export function LoginPage(): ReactElement {
 
      if (!loggingInProcess && !error && hasToken) {
           return <Navigate replace to="/home" />
-        }
+     }
      // todo: add some css framework
      return (
-          <div style={{ margin: "0 auto", width: 460, position: 'relative' }}>
-               <div style={{ margin: '120px 0 auto', padding: '30px 10% 50px', border: '1px solid #eaeced', overflow: 'hidden', position: 'relative' }}>
-                    <form style={{ position: 'relative' }}>
-                         <label htmlFor="email">Email:</label>
-                         <br />
-                         <input
-                              type="text"
-                              id="email"
-                              value={email}
-                              onChange={(e) => {
-                                   setEmail(e.target.value)
-                              }}
-                         />
-                         <br />
-                         <label htmlFor="password">Password:</label>
-                         <br />
-                         <input
-                              type="password"
-                              id="password"
-                              value={password}
-                              onChange={(e) => {
-                                   setPassword(e.target.value)
-                              }}
-                         />
-
-                    </form>
+          <div style={{ margin: "300px auto", width: 460, position: 'relative' }}>
+               <Box
+                    sx={{
+                         display: 'flex',
+                         flexDirection: 'column',
+                    }}
+               >
+                    <h1>Sign In</h1>
+                    <TextField
+                         id="email"
+                         label="Email address*"
+                         variant="outlined"
+                         size="small"
+                         fullWidth
+                         onChange={(e) => {
+                              setEmail(e.target.value)
+                         }}
+                    />
+                    <Box sx={{ height: 20 }} />
+                    <TextField
+                         id="password"
+                         label="Password*"
+                         variant="outlined"
+                         size="small"
+                         fullWidth
+                         onChange={(e) => {
+                              setPassword(e.target.value)
+                         }}
+                    />
+                    <Box sx={{ height: 20 }} />
                     <Button
                          onClick={() => {
                               login({ password, email });
@@ -50,7 +56,7 @@ export function LoginPage(): ReactElement {
                          {loggingInProcess && <CircularProgress />}
                     </Button>
                     {error && (<div style={{ color: 'red' }}>Invalid password or email</div>)}
-               </div>
+               </Box>
           </div >
      )
 }
