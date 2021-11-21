@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import { useNavigation } from '../../../hooks';
+import { useNavigation } from '../../nav/hooks';
 import { MenuIcon } from '../../../components';
 
 export function HomePageContent(): ReactElement {

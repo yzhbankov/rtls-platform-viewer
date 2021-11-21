@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { PrivateElement } from '../features/auth/components';
-import { Header } from '../components/layout';
+import { Header } from '../features/nav/components';
 import { HomePage } from '../features/homepage/components';
 import { AdminPage, TrackablesPage, AnchorsPage, SublocationsPage, LocationsPage } from '../features/admin/components';
 import { SystemPage } from '../features/systempage/components';

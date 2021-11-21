@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { AppContext } from '../../../context';
-import { useNavigation } from '../../../hooks';
+import { useNavigation } from '../../nav/hooks';
 
 type AuthHookType = {
      error: any;
