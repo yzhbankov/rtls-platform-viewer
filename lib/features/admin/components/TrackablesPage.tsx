@@ -7,26 +7,23 @@ export function TrackablesPage(): ReactElement {
      const trackablesResult = useQuery('trackablesAll', async () => api.trackables.findAll());
      const tagsResult = useQuery('tagsAll', async () => api.tags.findAll());
      const tagAssignmentssResult = useQuery('tagAssignmentsAll', async () => api.tagAssignments.findAll());
-     return <>
+     return <div>
           <div>Trackables/Tags/Assignments Page Content</div>
-          <br/>
           <div>Trackables</div>
           <div>Is Loading: {trackablesResult.isLoading + ''}</div>
           <div>Is Error: {trackablesResult.isError + ''}</div>
           <div>Data: {JSON.stringify(trackablesResult.data)}</div>
 
-          <br/>
           <div>Tags</div>
           <div>Is Loading: {tagsResult.isLoading + ''}</div>
           <div>Is Error: {tagsResult.isError + ''}</div>
           <div>Data: {JSON.stringify(tagsResult.data)}</div>
 
-          <br/>
           <div>Tag Assignments</div>
           <div>Is Loading: {tagAssignmentssResult.isLoading + ''}</div>
           <div>Is Error: {tagAssignmentssResult.isError + ''}</div>
           <div>Data: {JSON.stringify(tagAssignmentssResult.data)}</div>
-     </>
+     </div>
 }
 
 TrackablesPage.propTypes = {};
