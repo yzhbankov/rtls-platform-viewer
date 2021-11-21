@@ -4,6 +4,8 @@ import { PrivateElement } from '../features/auth/components';
 import { Header } from '../components/layout';
 import { HomePage } from '../features/homepage/components';
 import { AdminPage, TrackablesPage, AnchorsPage, SublocationsPage, LocationsPage } from '../features/admin/components';
+import { SystemPage } from '../features/systempage/components';
+import { SiteView } from '../features/viewepage/components';
 
 export function App(): ReactElement {
      return (
@@ -19,8 +21,8 @@ export function App(): ReactElement {
                          <Route path="locations" element={<PrivateElement element={<LocationsPage />} />} />
                          <Route path="sublocations" element={<PrivateElement element={<SublocationsPage />} />} />
                     </Route>
-                    <Route path="site-view" element={<PrivateElement element={<div>Site View Page</div>} />} />
-                    <Route path="system" element={<PrivateElement element={<div>System Status</div>} />} />
+                    <Route path="site-view" element={<PrivateElement element={<SiteView />} />} />
+                    <Route path="system" element={<PrivateElement element={<SystemPage />} />} />
                </Routes>
           </>
      )

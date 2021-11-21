@@ -18,7 +18,7 @@ export function Button({ label, children, onClick }): ReactElement<ButtonProps> 
 
 Button.propTypes = {
      label: PropTypes.string,
-     children: PropTypes.object,
+     children: PropTypes.arrayOf(PropTypes.any),
      onClick: PropTypes.func
 };
 

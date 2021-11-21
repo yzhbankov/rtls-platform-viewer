@@ -8,7 +8,13 @@ import { AppProvider } from './context';
 import { ErrorBoundaryComponent } from './components';
 import './index.css'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+     defaultOptions: {
+       queries: {
+         refetchOnWindowFocus: false,
+       },
+     },
+   })
 
 ReactDom.render(
      <BrowserRouter>
