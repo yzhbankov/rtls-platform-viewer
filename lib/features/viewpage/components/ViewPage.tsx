@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 import { Layout, Content } from '../../../components/layout';
-import { SystemPageContent } from './SystemPageContent';
+import { ViewPageContent } from './ViewPageContent';
 
 
 
-export function SystemPage(): ReactElement {
+export function ViewPage(): ReactElement {
      return (
           <Layout
                sideBarRender={
@@ -14,7 +14,7 @@ export function SystemPage(): ReactElement {
                     () => (
                          <Content
                               innerContentRender={
-                                   () => <SystemPageContent />
+                                   () => <ViewPageContent />
                               }
                          />)
                }
@@ -22,5 +22,5 @@ export function SystemPage(): ReactElement {
      )
 }
 
-SystemPage.defaultProps = {};
-SystemPage.propTypes = {};
+ViewPage.defaultProps = {};
+ViewPage.propTypes = {};

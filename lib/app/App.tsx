@@ -5,7 +5,7 @@ import { Header } from '../components/layout';
 import { HomePage } from '../features/homepage/components';
 import { AdminPage, TrackablesPage, AnchorsPage, SublocationsPage, LocationsPage } from '../features/admin/components';
 import { SystemPage } from '../features/systempage/components';
-import { SiteView } from '../features/viewepage/components';
+import { ViewPage } from '../features/viewpage/components';
 
 export function App(): ReactElement {
      return (
@@ -21,7 +21,7 @@ export function App(): ReactElement {
                          <Route path="locations" element={<PrivateElement element={<LocationsPage />} />} />
                          <Route path="sublocations" element={<PrivateElement element={<SublocationsPage />} />} />
                     </Route>
-                    <Route path="site-view" element={<PrivateElement element={<SiteView />} />} />
+                    <Route path="site-view" element={<PrivateElement element={<ViewPage />} />} />
                     <Route path="system" element={<PrivateElement element={<SystemPage />} />} />
                </Routes>
           </>
