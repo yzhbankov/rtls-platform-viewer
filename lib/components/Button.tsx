@@ -7,11 +7,12 @@ type ButtonProps = {
      label: string;
      children: ReactElement;
      onClick: () => void;
+     disabled: boolean;
 }
 
-export function Button({ label, children, onClick }): ReactElement<ButtonProps> {
+export function Button({ label, children, onClick, disabled }): ReactElement<ButtonProps> {
      return (
-          <MuiButton variant="contained" onClick={onClick}>
+          <MuiButton variant="contained" onClick={onClick} disabled={disabled}>
                {children || label}
           </MuiButton>
      );

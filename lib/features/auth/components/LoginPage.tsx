@@ -27,10 +27,11 @@ export function LoginPage(): ReactElement {
                     <h1>Sign In</h1>
                     <TextField
                          id="email"
-                         label="Email address*"
+                         label="Email address"
                          variant="outlined"
                          size="small"
                          fullWidth
+                         required
                          onChange={(e) => {
                               setEmail(e.target.value)
                          }}
@@ -38,16 +39,18 @@ export function LoginPage(): ReactElement {
                     <Box sx={{ height: 20 }} />
                     <TextField
                          id="password"
-                         label="Password*"
+                         label="Password"
                          variant="outlined"
                          size="small"
                          fullWidth
+                         required
                          onChange={(e) => {
                               setPassword(e.target.value)
                          }}
                     />
                     <Box sx={{ height: 20 }} />
                     <Button
+                         disabled={loggingInProcess || !password || !email}
                          onClick={() => {
                               login({ password, email });
                          }}
