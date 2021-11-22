@@ -1,15 +1,13 @@
-import React, { ReactElement, useContext } from 'react';
-import { useQuery } from 'react-query';
-import { AppContext } from '../../../context';
+import React, { ReactElement } from 'react';
+import { useSublocations } from '../../../hooks';
 
 export function SublocationsPage(): ReactElement {
-     const { api } = useContext(AppContext);
-     const { data, isError, isLoading } = useQuery('sublocationsAll', async () => api.sublocations.findAll());
+     const sublocations = useSublocations();
      return <>
           <div>Sublocations Page Content</div>
-          <div>Is Loading: {isLoading + ''}</div>
-          <div>Is Error: {isError + ''}</div>
-          <div>Data: {JSON.stringify(data)}</div>
+          <div>Is Loading: {sublocations.loadAll.isLoading + ''}</div>
+          <div>Is Error: {sublocations.loadAll.isError + ''}</div>
+          <div>Data: {JSON.stringify(sublocations.loadAll.data)}</div>
      </>
 }
 

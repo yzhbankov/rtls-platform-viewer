@@ -1,15 +1,13 @@
-import React, { ReactElement, useContext } from 'react';
-import { useQuery } from 'react-query'
-import { AppContext } from '../../../context';
+import React, { ReactElement } from 'react';
+import { useLocations } from '../../../hooks';
 
 export function LocationsPage(): ReactElement {
-     const { api } = useContext(AppContext)
-     const result = useQuery('locationsAll', async () => api.locations.findAll());
+     const locations = useLocations();
      return <>
           <div>Locations Page Content</div>
-          <div>Is Loading: {result.isLoading + ''}</div>
-          <div>Is Error: {result.isError + ''}</div>
-          <div>Data: {JSON.stringify(result.data)}</div>
+          <div>Is Loading: {locations.loadAll.isLoading + ''}</div>
+          <div>Is Error: {locations.loadAll.isError + ''}</div>
+          <div>Data: {JSON.stringify(locations.loadAll.data)}</div>
      </>
 }
 

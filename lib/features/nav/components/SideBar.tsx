@@ -140,6 +140,7 @@ export function SideBar(): ReactElement {
       </List>
       <Divider />
       <ListItem
+        button
         onClick={() => {
           navigate("/home");
           setSelected('home');
