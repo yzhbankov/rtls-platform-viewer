@@ -2,8 +2,14 @@ import { useContext } from 'react';
 import { useQuery, UseQueryResult } from 'react-query'
 import { AppContext } from '../context'
 
+type NodeAssignmentsResponse = {
+     node_assignments: {
+          mac: string;
+          anchor_uid: string;
+     }[]
+}
 type NodeAssignmentsHookType = {
-     loadAll: UseQueryResult;
+     loadAll: UseQueryResult<NodeAssignmentsResponse>;
 }
 
 export function useNodeAssignments(): NodeAssignmentsHookType {

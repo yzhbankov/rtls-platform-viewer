@@ -9,10 +9,10 @@ export class MockNodesApi extends NodesApi {
   }
 
   async findAll() {
-    return { tags: this.#mock }
+    return { nodes: this.#mock }
   }
   async findByMac(mac) {
-    return { tags: [ this.#mock[0] ] }
+    return { nodes: [ this.#mock[0] ] }
   }
   async save(params) {
     return this.#mock[0]

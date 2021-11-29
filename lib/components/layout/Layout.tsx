@@ -19,7 +19,7 @@ export function Layout(props): ReactElement<LayoutProps> {
                     <div style={{ width: 220 }}>
                          {sideBarRender()}
                     </div>
-                    <div>
+                    <div style={{ width: '100%' }}>
                          {contentRender()}
                     </div>
                </div>
