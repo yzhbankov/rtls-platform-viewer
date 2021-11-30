@@ -45,7 +45,6 @@ export function SideBar(): ReactElement {
       <List>
         <ListItemButton
           onClick={() => {
-            navigate("/admin");
             handleAdminClick();
             setSelected('admin');
           }}
@@ -97,19 +96,6 @@ export function SideBar(): ReactElement {
                 <LocationCityIcon />
               </ListItemIcon>
               <ListItemText primary="Locations" />
-            </ListItemButton>
-            <ListItemButton
-              sx={{ pl: 4 }}
-              onClick={() => {
-                navigate('/admin/sublocations');
-                setSelected('sublocations');
-              }}
-              selected={selected === 'sublocations'}
-            >
-              <ListItemIcon>
-                <RoomIcon />
-              </ListItemIcon>
-              <ListItemText primary="Sublocations" />
             </ListItemButton>
           </List>
         </Collapse>

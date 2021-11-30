@@ -2,8 +2,14 @@ import { useContext } from 'react';
 import { useQuery, UseQueryResult } from 'react-query'
 import { AppContext } from '../context'
 
+type LocationsResponse = {
+     locations: {
+          name: string;
+          uid: string;
+     }[]
+}
 type LocationsHookType = {
-     loadAll: UseQueryResult;
+     loadAll: UseQueryResult<LocationsResponse>;
 }
 
 export function useLocations(): LocationsHookType {
