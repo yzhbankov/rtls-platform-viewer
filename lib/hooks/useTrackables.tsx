@@ -2,8 +2,16 @@ import { useContext } from 'react';
 import { useQuery, UseQueryResult } from 'react-query'
 import { AppContext } from '../context'
 
+
+type TrackablesResponse = {
+     trackables: {
+          name: string;
+          uid: string;
+          tag_mac: string;
+     }[]
+}
 type TrackablesHookType = {
-     loadAll: UseQueryResult;
+     loadAll: UseQueryResult<TrackablesResponse>;
 }
 
 export function useTrackables(): TrackablesHookType {

@@ -2,8 +2,14 @@ import { useContext } from 'react';
 import { useQuery, UseQueryResult } from 'react-query'
 import { AppContext } from '../context'
 
+type TagsResponse = {
+     tags: {
+          mac: string;
+          last_heard: string;
+     }[]
+}
 type TagsHookType = {
-     loadAll: UseQueryResult;
+     loadAll: UseQueryResult<TagsResponse>;
 }
 
 export function useTags(): TagsHookType {

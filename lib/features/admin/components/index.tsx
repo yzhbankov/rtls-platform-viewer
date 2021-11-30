@@ -1,5 +1,5 @@
 export * from './AdminPage';
-export * from './TrackablesPage';
+export * from './trackables/TrackablesPage';
 export * from './anchors/AnchorsPage';
 export * from './LocationsPage';
 export * from './SublocationsPage';
