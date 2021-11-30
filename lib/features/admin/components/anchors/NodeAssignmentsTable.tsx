@@ -1,11 +1,10 @@
 import React, { ReactElement } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import CircularProgress from '@mui/material/CircularProgress';
+import { EmptyDataTable, ErrorDataTable, InProgressDataTable } from '../../../../components';
 import { useNodeAssignments } from '../../../../hooks';
 
 export function NodeAssignmentsTable(): ReactElement {
      const nodeAssignments = useNodeAssignments();
-
      const columns: GridColDef[] = [
           { field: 'anchor_uid', headerName: 'Anchor Uid', hide: true },
           { field: 'mac', headerName: 'MAC', flex: 200 },
@@ -20,9 +19,9 @@ export function NodeAssignmentsTable(): ReactElement {
                getRowId={(row) => row.anchor_uid}
                pageSize={5}
                components={{
-                    LoadingOverlay: () => <CircularProgress />,
-                    NoRowsOverlay: () => <div>Empty Table</div>,
-                    ErrorOverlay: () => <div>Error During Data Fetching</div>,
+                    LoadingOverlay: () => <InProgressDataTable />,
+                    NoRowsOverlay: () => <EmptyDataTable />,
+                    ErrorOverlay: () => <ErrorDataTable />,
                   }}
                error={nodeAssignments.loadAll.isError || null}
                loading={nodeAssignments.loadAll.isLoading}

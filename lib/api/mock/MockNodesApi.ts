@@ -12,7 +12,7 @@ export class MockNodesApi extends NodesApi {
     return { nodes: this.#mock }
   }
   async findByMac(mac) {
-    return { nodes: [ this.#mock[0] ] }
+    return { nodes: [this.#mock[0]] }
   }
   async save(params) {
     return this.#mock[0]

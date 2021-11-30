@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import CircularProgress from '@mui/material/CircularProgress';
+import { EmptyDataTable, ErrorDataTable, InProgressDataTable } from '../../../../components';
 import { useAnchors } from '../../../../hooks';
 
 export function AnchorsTable(): ReactElement {
@@ -20,9 +20,9 @@ export function AnchorsTable(): ReactElement {
                columns={columns}
                getRowId={(row) => row.uid}
                components={{
-                    LoadingOverlay: () => <CircularProgress />,
-                    NoRowsOverlay: () => <div>Empty Table</div>,
-                    ErrorOverlay: () => <div>Error During Data Fetching</div>,
+                    LoadingOverlay: () => <InProgressDataTable />,
+                    NoRowsOverlay: () => <EmptyDataTable />,
+                    ErrorOverlay: () => <ErrorDataTable />,
                   }}
                error={anchors.loadAll.isError || null}
                loading={anchors.loadAll.isLoading}

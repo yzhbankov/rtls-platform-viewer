@@ -5,8 +5,6 @@ import { NodesTable } from './NodesTable';
 import { NodeAssignmentsTable } from './NodeAssignmentsTable';
 
 export function AnchorsPage(): ReactElement {
-
-
      return (
           <AnchorsPageLayout
                leftSideRender={() => <AnchorsTable />}
