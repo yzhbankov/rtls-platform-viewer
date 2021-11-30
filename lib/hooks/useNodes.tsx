@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { useQuery, UseQueryResult } from 'react-query'
 import { AppContext } from '../context'
 
-type Nodes = {
+type NodesResponse = {
      nodes: {
           mac: string;
           last_heard: string;
@@ -12,7 +12,7 @@ type Nodes = {
 }
 
 type NodesHookType = {
-     loadAll: UseQueryResult<Nodes>;
+     loadAll: UseQueryResult<NodesResponse>;
 }
 
 export function useNodes(): NodesHookType {
