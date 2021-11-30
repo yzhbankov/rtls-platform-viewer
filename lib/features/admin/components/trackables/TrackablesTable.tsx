@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { EmptyDataTable, ErrorDataTable, InProgressDataTable } from '../../../../components';
+import { EmptyDataTable, ErrorDataTable, InProgressDataTable, TableTitle } from '../../../../components';
 import { useTrackables } from '../../../../hooks';
 
 export function TrackablesTable(): ReactElement {
@@ -13,7 +13,7 @@ export function TrackablesTable(): ReactElement {
      ];
 
      return <>
-          <h1>Trackables</h1>
+          <TableTitle>Trackables</TableTitle>
           <DataGrid
                rows={trackables.loadAll.data ? trackables.loadAll.data.trackables : []}
                autoHeight

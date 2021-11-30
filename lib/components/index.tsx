@@ -4,3 +4,4 @@ export * from './MenuIcon';
 export * from './ErrorDataTable';
 export * from './InProgressDataTable';
 export * from './EmptyDataTable';
+export * from './TableTitle';

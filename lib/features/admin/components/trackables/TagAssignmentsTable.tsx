@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { EmptyDataTable, ErrorDataTable, InProgressDataTable } from '../../../../components';
+import { EmptyDataTable, ErrorDataTable, InProgressDataTable, TableTitle } from '../../../../components';
 import { useTagTrackableData } from '../../hooks';
 
 export function TagAssignmentsTable(): ReactElement {
@@ -12,7 +12,7 @@ export function TagAssignmentsTable(): ReactElement {
      ];
 
      return <>
-          <h1>Tag Assignments</h1>
+          <TableTitle>Tag Assignments</TableTitle>
           <DataGrid
                rows={tagAssignments.data ? tagAssignments.data : []}
                autoHeight

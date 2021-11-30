@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { EmptyDataTable, ErrorDataTable, InProgressDataTable } from '../../../../components';
+import { EmptyDataTable, ErrorDataTable, InProgressDataTable, TableTitle } from '../../../../components';
 import { useLocations } from '../../../../hooks';
 
 export function LocationsTable(): ReactElement {
@@ -12,7 +12,7 @@ export function LocationsTable(): ReactElement {
      ];
 
      return <>
-          <h1>Locations</h1>
+          <TableTitle>Locations</TableTitle>
           <DataGrid
                rows={locations.loadAll.data ? locations.loadAll.data.locations : []}
                autoHeight

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { EmptyDataTable, ErrorDataTable, InProgressDataTable } from '../../../../components';
+import { EmptyDataTable, ErrorDataTable, InProgressDataTable, TableTitle } from '../../../../components';
 import { useTags } from '../../../../hooks';
 
 export function TagsTable(): ReactElement {
@@ -13,7 +13,7 @@ export function TagsTable(): ReactElement {
      ];
 
      return <>
-          <h1>Tags</h1>
+          <TableTitle>Tags</TableTitle>
           <DataGrid
                rows={tags.loadAll.data ? tags.loadAll.data.tags : []}
                autoHeight

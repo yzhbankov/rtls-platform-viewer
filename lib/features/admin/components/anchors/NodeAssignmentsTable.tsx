@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { EmptyDataTable, ErrorDataTable, InProgressDataTable } from '../../../../components';
+import { EmptyDataTable, ErrorDataTable, InProgressDataTable, TableTitle } from '../../../../components';
 import { useNodeAnchorsData } from '../../hooks';
 
 export function NodeAssignmentsTable(): ReactElement {
@@ -12,7 +12,7 @@ export function NodeAssignmentsTable(): ReactElement {
      ];
 
      return <>
-          <h1>Node Assignments</h1>
+          <TableTitle>Node Assignments</TableTitle>
           <DataGrid
                rows={nodeAssignments.data ? nodeAssignments.data : []}
                autoHeight

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { EmptyDataTable, ErrorDataTable, InProgressDataTable } from '../../../../components';
+import { EmptyDataTable, ErrorDataTable, InProgressDataTable, TableTitle } from '../../../../components';
 import { useLocationSublocationData } from '../../hooks';
 
 export function SublocationsTable(): ReactElement {
@@ -13,7 +13,7 @@ export function SublocationsTable(): ReactElement {
      ];
 
      return <>
-          <h1>Sublocations</h1>
+          <TableTitle>Sublocations</TableTitle>
           <DataGrid
                rows={sublocations.data}
                autoHeight

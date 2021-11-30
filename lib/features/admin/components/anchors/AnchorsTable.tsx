@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { EmptyDataTable, ErrorDataTable, InProgressDataTable } from '../../../../components';
+import { EmptyDataTable, ErrorDataTable, InProgressDataTable, TableTitle } from '../../../../components';
 import { useAnchors } from '../../../../hooks';
 
 export function AnchorsTable(): ReactElement {
@@ -13,7 +13,7 @@ export function AnchorsTable(): ReactElement {
      ];
 
      return <>
-          <h1>Anchors</h1>
+          <TableTitle>Anchors</TableTitle>
           <DataGrid
                rows={anchors.loadAll.data ? anchors.loadAll.data.anchors : []}
                autoHeight
