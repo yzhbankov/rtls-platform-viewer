@@ -70,7 +70,7 @@ module.exports = {
   externals: [
     {
       xmlhttprequest: '{XMLHttpRequest:XMLHttpRequest}',
-    },
+    }
   ],
   plugins: [
     new Dotenv({

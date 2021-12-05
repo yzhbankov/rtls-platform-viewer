@@ -1,7 +1,14 @@
 import React, { ReactElement } from 'react';
+import { useWebSocket } from '../hooks';
 
 export function ViewPage(): ReactElement {
-     return <div>View Page Content</div>
+     const { positions } = useWebSocket();
+     return (
+          <>
+               <div>View Page Content</div>
+               <div>{JSON.stringify(positions)}</div>
+          </>
+     )
 }
 
 ViewPage.propTypes = {};

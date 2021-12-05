@@ -56,6 +56,34 @@
                "created_at": "2021-04-21T10:00:00.000Z"
           },
           {
+               "mac": "E4956EA50101",
+               "last_heard": "2021-04-21T10:00:00.000Z",
+               "node_id": 5,
+               "cbid": null,
+               "created_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "mac": "E4956EA50102",
+               "last_heard": "2021-04-21T10:00:00.000Z",
+               "node_id": 6,
+               "cbid": null,
+               "created_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "mac": "E4956EA50103",
+               "last_heard": "2021-04-21T10:00:00.000Z",
+               "node_id": 7,
+               "cbid": null,
+               "created_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "mac": "E4956EA50104",
+               "last_heard": "2021-04-21T10:00:00.000Z",
+               "node_id": 8,
+               "cbid": null,
+               "created_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
                "mac": "E4956EA5040B",
                "last_heard": "2021-04-21T10:00:00.000Z",
                "node_id": 4,
@@ -143,10 +171,42 @@
                "updated_at": "2021-04-21T10:00:00.000Z"
           },
           {
+               "uid": "kYuzyFjYQl65g0MqNvha11",
+               "location_uid": "oVi39JDNTLO9qdeNM-Ecvg",
+               "name": "Warehouse 3",
+               "id": 3,
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "uid": "kYuzyFjYQl65g0MqNvha22",
+               "location_uid": "oVi39JDNTLO9qdeNM-Ecvg",
+               "name": "Warehouse 4",
+               "id": 4,
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "uid": "kYuzyFjYQl65g0MqNvha33",
+               "location_uid": "oVi39JDNTLO9qdeNM-Ecvg",
+               "name": "Warehouse 5",
+               "id": 5,
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "uid": "kYuzyFjYQl65g0MqNvha44",
+               "location_uid": "oVi39JDNTLO9qdeNM-Ecvg",
+               "name": "Warehouse 6",
+               "id": 6,
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
                "uid": "kYuzyFjYQlasfd32ZXhdYA",
                "location_uid": "oVi39JDNTLO9qdeNM-Ecvg",
                "name": "Warehouse 2",
-               "id": 1,
+               "id": 2,
                "created_at": "2021-04-21T10:00:00.000Z",
                "updated_at": "2021-04-21T10:00:00.000Z"
           }
@@ -162,7 +222,35 @@
           {
                "uid": "oVi39JDNTLO9qdeNM-4444",
                "name": "WestSide2",
-               "network_id": 1,
+               "network_id": 2,
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "uid": "oVi39JDNTLO9qdeNM-1111",
+               "name": "WestSide3",
+               "network_id": 3,
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "uid": "oVi39JDNTLO9qdeNM-2222",
+               "name": "WestSide4",
+               "network_id": 4,
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "uid": "oVi39JDNTLO9qdeNM-3333",
+               "name": "WestSide5",
+               "network_id": 5,
+               "created_at": "2021-04-21T10:00:00.000Z",
+               "updated_at": "2021-04-21T10:00:00.000Z"
+          },
+          {
+               "uid": "oVi39JDNTLO9qdeNM-5555",
+               "name": "WestSide6",
+               "network_id": 6,
                "created_at": "2021-04-21T10:00:00.000Z",
                "updated_at": "2021-04-21T10:00:00.000Z"
           }
