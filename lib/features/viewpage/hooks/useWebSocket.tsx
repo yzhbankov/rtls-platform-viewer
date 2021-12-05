@@ -5,7 +5,18 @@ const authToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzSW4iOjYwNDgw
 const projectUid = 'i7lONZPZTM6cI06btywj0Q';
 const wsHost = 'wss://dev7.rpplabs.com/api/ws/';
 
-export function useWebSocket() {
+// todo: add pos props
+type Position = {
+     x: number;
+     y: number;
+     dev_id: string;
+}
+
+type WsHook = {
+     positions: {[key: string]: Position}
+}
+
+export function useWebSocket(): WsHook {
      const [positions, setPositions] = useState({});
      useEffect(() => {
           const ws = new WebSocket(wsHost);
